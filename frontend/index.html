@@ -270,8 +270,12 @@ body{background:var(--bg);color:var(--text);font-family:'Cabinet Grotesk',sans-s
 // API CONFIG — pon aquí la URL de tu backend
 // ═══════════════════════════════════════════════════
 let API_BASE = localStorage.getItem('unad-api-url') || '';
-const API_SECRET = localStorage.getItem('unad-api-secret') || '';
-
+// Si no hay secret guardado, lo establecemos por defecto
+let API_SECRET = localStorage.getItem('unad-api-secret') || '';
+if (!API_SECRET) {
+    API_SECRET = '1023028621Jhojan.';
+    localStorage.setItem('unad-api-secret', API_SECRET);
+}
 function saveApiUrl(){
   const url = document.getElementById('api-url-input').value.trim().replace(/\/$/,'');
   if(!url){ toast('Ingresa una URL válida','err'); return; }
