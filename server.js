@@ -10,9 +10,10 @@ const PORT = process.env.PORT || 3001;
 // ─────────────────────────────────────────────
 // MIDDLEWARE
 // ─────────────────────────────────────────────
+app.options('*', cors());
 app.use(cors({
-  origin: process.env.FRONTEND_URL || '*',
-  methods: ['GET','POST','PUT','PATCH','DELETE'],
+  origin: '*',
+  methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type','x-api-secret'],
 }));
 app.use(express.json({ limit: '2mb' }));
