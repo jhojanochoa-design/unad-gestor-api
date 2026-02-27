@@ -241,5 +241,5 @@ app.put('/api/entregas', auth, async (req, res) => {
 // START
 // ─────────────────────────────────────────────
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Servidor corriendo en puerto ${port}`);
+  console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
 });
