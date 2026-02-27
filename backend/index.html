@@ -269,7 +269,7 @@ body{background:var(--bg);color:var(--text);font-family:'Cabinet Grotesk',sans-s
 // ═══════════════════════════════════════════════════
 // API CONFIG — pon aquí la URL de tu backend
 // ═══════════════════════════════════════════════════
-let API_BASE = localStorage.getItem('unad-api-url') || '';
+let API_BASE = localStorage.getItem('unad-api-url') || 'https://unad-gestor-api-production.up.railway.app';
 // Si no hay secret guardado, lo establecemos por defecto
 let API_SECRET = localStorage.getItem('unad-api-secret') || '';
 if (!API_SECRET) {
